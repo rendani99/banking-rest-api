@@ -1,10 +1,3 @@
-# banking-rest-api
-A robust Banking REST API engineered with Java, Spring Boot, and PostgreSQL. Features transactional fund transfers, layered clean architecture, DTO validation, and JUnit test coverage.
-
-
-
-
-
 # 🏦 Core Banking & Transaction Management REST API
 
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -14,40 +7,35 @@ A robust Banking REST API engineered with Java, Spring Boot, and PostgreSQL. Fea
 ![JUnit 5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-A RESTful backend service engineered with **Java** and **Spring Boot**, implementing clean coding standards, layered architecture, ACID-compliant database operations, and centralized exception handling.
+A production-style RESTful backend service engineered with **Java** and **Spring Boot**, implementing clean coding standards, layered architecture, ACID-compliant database operations, and centralized exception handling.
 
 ---
 
 ## 📌 Features
 
-- **Account Lifecycle Management**: Create, read, and manage bank accounts with live balance tracking.
-- **Transactional Consistency**: Robust fund transfers, deposits, and withdrawals using Spring's `@Transactional` to enforce ACID compliance and prevent race conditions.
-- **Clean Layered Architecture**: Strict separation of concerns across Controller, Service, Repository, and Entity layers.
-- **Data Transfer Objects (DTOs)**: Enforces input validation using `jakarta.validation` (`@NotNull`, `@Positive`, `@Email`) to sanitize payloads before reaching business logic.
-- **Centralized Error Handling**: Custom business exceptions with unified `@ControllerAdvice` error responses (RFC 7807 problem details).
-- **Relational Persistence**: Integrated with relational databases (PostgreSQL for production / H2 in-memory for testing) via **Spring Data JPA & Hibernate**.
-- **Automated Testing Suite**: Comprehensive unit and integration test coverage with **JUnit 5** and **Mockito**.
+- **Account Lifecycle Management**: Create, view, update, and manage customer bank accounts.
+- **Transactional Integrity**: Robust money transfers, deposits, and withdrawals using Spring's `@Transactional` to prevent race conditions and ensure ACID compliance.
+- **Clean Architecture & Separation of Concerns**: Strict multi-tier isolation (`Controller` ➔ `Service` ➔ `Repository` ➔ `Domain Model`).
+- **Data Transfer Objects (DTOs)**: Enforces input validation using `jakarta.validation` (`@NotNull`, `@Positive`, `@Email`) to ensure data sanitization before service-layer processing.
+- **Centralized Error Handling**: Global exception controller utilizing `@ControllerAdvice` and `@ExceptionHandler` returning standardized error payloads (RFC 7807 problem details).
+- **Relational Persistence**: Integrated with relational databases (PostgreSQL / H2 for development) via **Spring Data JPA & Hibernate**.
+- **Automated Testing Suite**: Thorough unit and integration tests with **JUnit 5** and **Mockito**.
 
 ---
 
 ## 🛠️ Tech Stack & Prerequisites
 
-- **Language:** Java 17+
+- **Language:** Java 17+ / Java 21
 - **Framework:** Spring Boot 3.x (Spring Web, Spring Data JPA, Spring Validation)
-- **Database:** PostgreSQL / H2 In-Memory
+- **Database:** PostgreSQL (Production) / H2 In-Memory (Dev/Testing)
 - **ORM / Persistence:** Hibernate / Spring Data JPA
-- **Build Tool:** Maven
+- **Build Tool:** Maven or Gradle
 - **Testing:** JUnit 5, Mockito, AssertJ
 
 ---
 
-## 🏗️ Architecture Overview
+## 👤 Author
 
-```text
-src/main/java/com/bank/api/
-├── controller/        # REST endpoints and HTTP request routing
-├── dto/               # Request/Response models + validation rules
-├── exception/         # Custom exceptions & GlobalExceptionHandler
-├── model/             # JPA Entities representing relational database tables
-├── repository/        # Spring Data JPA interfaces for data access
-└── service/           # Core business logic and transaction orchestration
+**Rendani Austin Mmola**  
+- **GitHub:** [@rendani99](https://github.com/rendani99)  
+- **LinkedIn:** [rendani-austin-mmola](https://www.linkedin.com/in/rendani-austin-mmola-9309221a6)
